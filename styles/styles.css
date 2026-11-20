@@ -1,0 +1,66 @@
+/* ========================================
+   VARIABELEN
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Kleuren */
+    --COLOR_PRIMARY: #1D3557;
+    --COLOR_SECONDARY: #457B9D;
+    --COLOR_ACCENT: #8ECAE6;
+    --COLOR_LINK: #1D6FA5;
+    --COLOR_BACKGROUND: #F8F8F6;
+    --COLOR_WHITE: #FFFFFF;
+    --COLOR_TEXT: #222222;
+    --COLOR_LINK_HOVER: #8ECAE6;
+
+    /* Lettertypes */
+    --FONT_BODY: Arial, sans-serif;
+    --FONT_TITLE: Georgia, serif;
+
+    /* Tekstgroottes */
+    --FONT_SIZE_BODY: 1rem;
+    --FONT_SIZE_H1: clamp(2.2rem, 4vw, 3.8rem);
+    --FONT_SIZE_H2: 2rem;
+    --FONT_SIZE_H3: 1.25rem;
+
+    /* Ruimte */
+    --SPACE_SMALL: 1rem;
+    --SPACE_MEDIUM: 2rem;
+    --SPACE_LARGE: 4rem;
+
+    /* Overig */
+    --BORDER_RADIUS: 1rem;
+    --MAX_WIDTH: 1200px;
+}
+
+
+body {
+    font-family: var(--FONT_BODY);
+    font-size: var(--FONT_SIZE_BODY);
+    color: var(--COLOR_TEXT);
+    background-color: var(--COLOR_BACKGROUND);
+    line-height: 1.6;
+}
+
+/* Algemene linkstijl */
+a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    color: var(--COLOR_LINK);
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--COLOR_LINK_HOVER);
+    text-decoration: underline;
+}

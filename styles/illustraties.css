@@ -1,0 +1,410 @@
+/* ========================================
+   HEADER
+   ======================================== */
+
+.header {
+    padding: 1.5rem 2rem;
+    background-color: var(--COLOR_WHITE);
+}
+
+.nav {
+    max-width: var(--MAX_WIDTH);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu summary {
+    padding: 0.75rem 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu summary::after {
+    content: "⌄";
+    margin-left: 0.5rem;
+}
+
+.nav-list {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+
+    min-width: 200px;
+    padding: 0.75rem;
+    list-style: none;
+
+    background-color: var(--COLOR_WHITE);
+    border-radius: var(--BORDER_RADIUS);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.nav-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+}
+
+.nav-item a:hover {
+    background-color: var(--COLOR_BACKGROUND);
+}
+
+.nav-download {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--COLOR_PRIMARY);
+    color: var(--COLOR_WHITE);
+    border-radius: 2rem;
+}
+
+.nav-download:hover {
+    background-color: var(--COLOR_SECONDARY);
+    color: var(--COLOR_WHITE);
+}
+
+
+/* ========================================
+   ALGEMENE OPMAAK
+   ======================================== */
+
+.illustrations-hero,
+.illustration-intro,
+.illustration-gallery {
+    max-width: var(--MAX_WIDTH);
+    margin: 0 auto;
+    padding: var(--SPACE_LARGE) 2rem;
+}
+
+.illustrations-hero {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.eyebrow {
+    margin-bottom: 0.75rem;
+    color: var(--COLOR_LINK);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.illustrations-hero h1 {
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+
+    font-family: var(--FONT_TITLE);
+    font-size: var(--FONT_SIZE_H1);
+    line-height: 1.1;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.85rem 1.4rem;
+    border-radius: 2rem;
+}
+
+.button-primary {
+    background-color: var(--COLOR_PRIMARY);
+    color: var(--COLOR_WHITE);
+}
+
+
+.button-secondary {
+    border: 1px solid var(--COLOR_PRIMARY);
+    color: var(--COLOR_PRIMARY);
+}
+
+/* Dezelfde hover voor alle knoppen */
+.nav-download:hover,
+.nav-download:focus-visible,
+.button:hover,
+.button:focus-visible {
+    background-color: var(--COLOR_SECONDARY);
+    color: var(--COLOR_WHITE);
+    text-decoration: underline;
+}
+
+/* ========================================
+   INTRODUCTIE
+   ======================================== */
+
+.illustrations-hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5rem 2rem 4rem;
+}
+
+.illustrations-hero h1 {
+    margin-bottom: 1.5rem;
+    font-family: var(--FONT_TITLE);
+    font-size: var(--FONT_SIZE_H1);
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.hero-description {
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.illustrations-hero .button {
+    display: inline-block;
+    margin-right: 0.75rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 2rem;
+}
+
+/* ========================================
+   VRIJ TE GEBRUIKEN
+   ======================================== */
+
+.illustration-intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 3rem;
+
+    background-color: var(--COLOR_WHITE);
+    border-radius: var(--BORDER_RADIUS);
+}
+
+.illustration-intro h2 {
+    margin-bottom: 1rem;
+
+    font-family: var(--FONT_TITLE);
+    font-size: var(--FONT_SIZE_H2);
+    white-space: nowrap;
+}
+
+.illustration-intro p:not(.eyebrow) {
+    max-width: 850px;
+    margin-bottom: 1rem;
+}
+
+
+/* ========================================
+   ILLUSTRATIEGALERIJ
+   ======================================== */
+
+.illustration-gallery {
+    padding-top: 2rem;
+    padding-bottom: var(--SPACE_LARGE);
+}
+
+.section-heading {
+    margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+    margin-bottom: 0.75rem;
+
+    font-family: var(--FONT_TITLE);
+    font-size: var(--FONT_SIZE_H2);
+}
+
+.section-heading>p:last-child {
+    max-width: 650px;
+}
+
+.illustration-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.illustration-card {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--COLOR_WHITE);
+    border-radius: var(--BORDER_RADIUS);
+}
+
+.illustration-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 4 / 3;
+    padding: 1rem;
+    background-color: var(--COLOR_WHITE);
+}
+
+.illustration-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.illustration-card-content {
+    flex: 1;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.illustration-card h3 {
+    font-size: var(--FONT_SIZE_H3);
+}
+
+.illustration-card a {
+    margin-top: auto;
+    color: var(--COLOR_LINK);
+    font-weight: normal;
+}
+
+.illustration-card a:hover {
+    color: var(--COLOR_SECONDARY);
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    padding: var(--SPACE_LARGE) max(2rem, calc((100% - var(--MAX_WIDTH)) / 2)) 2rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+
+    background-color: #000000;
+    color: var(--COLOR_WHITE);
+}
+
+.footer-section h2 {
+    margin-bottom: 1rem;
+
+    font-family: var(--FONT_TITLE);
+    font-size: var(--FONT_SIZE_H3);
+}
+
+.footer-section p {
+    max-width: 400px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer linkjes */
+.footer-section a,
+.footer-section p a {
+    color: var(--COLOR_WHITE);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* Hover footer linkjes */
+.footer-section a:hover,
+.footer-section a:focus-visible,
+.footer-section p a:hover,
+.footer-section p a:focus-visible {
+    color: var(--COLOR_LINK_HOVER);
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+    .illustration-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .nav-download {
+        padding: 0.6rem 1rem;
+    }
+
+    .illustrations-hero,
+    .illustration-intro,
+    .illustration-gallery {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .illustrations-hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .intro-text {
+        padding: 1.5rem;
+    }
+
+    .illustration-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer {
+        padding: 2.5rem 1.5rem 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-section p {
+        max-width: none;
+    }
+}
