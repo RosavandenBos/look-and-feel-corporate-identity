@@ -1,6 +1,6 @@
 
 /* ========================================
-   ILLUSTRATIEPAGINA
+   HOMEPAGE
    ======================================== */
 
 /* ALGEMEEN */
@@ -14,12 +14,26 @@ body {
     font-family: var(--font-body);
 }
 
+/* Alle gewone tekst Arial */
 p, a, button, summary, li {
     font-family: var(--font-body);
 }
 
+/* Koppen Gelasio */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family);
+}
+
+/* Gelijke paginabreedte */
+.nav,
+.hero,
+.features,
+.content-options,
+.download-options {
+    width: calc(100% - 8rem);
+    max-width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
