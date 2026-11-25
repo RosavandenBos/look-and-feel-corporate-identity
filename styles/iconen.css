@@ -1,0 +1,343 @@
+/* ========================================
+   ICONENPAGINA
+   ======================================== */
+
+/* ALGEMEEN */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+/* Alle gewone tekst Arial */
+p, a, button, summary, li {
+    font-family: var(--font-body);
+}
+
+/* Koppen Gelasio */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+}
+
+/* Gelijke paginabreedte */
+.nav,
+.hero,
+.features,
+.content-options,
+.download-options {
+    width: calc(100% - 8rem);
+    max-width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.header {
+    background-color: var(--accent-color-lighter);
+    padding: 1.25rem 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu summary {
+    padding: 0.75rem 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu summary::after {
+    content: "⌄";
+    margin-left: 0.5rem;
+}
+
+.nav-list {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    padding: 0.75rem;
+    list-style: none;
+    background: var(--background);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+}
+
+.nav-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+}
+
+.nav-item a:hover {
+    background: var(--accent-color-lighter);
+}
+
+.nav-download {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--accent-color);
+    color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.nav-download:hover {
+    background: var(--accent-color-light);
+    border-color: var(--accent-color-light);
+    color: white;
+}
+
+/* ========================================
+   PAGINA
+   ======================================== */
+
+.icon-page {
+    width: min(1520px, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.icon-intro {
+    margin-bottom: 1.5rem;
+}
+
+.icon-intro h1 {
+    margin-bottom: 0.25rem;
+    font-size: var(--font-size-h1);
+}
+
+.icon-intro p:last-child {
+    color: var(--secondary-text);
+}
+
+
+/* ========================================
+   ZOEKEN
+   ======================================== */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-text);
+    border-radius: 6px;
+    background: var(--background);
+}
+
+.search-box input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font: inherit;
+}
+
+
+/* ========================================
+   FILTERS
+   ======================================== */
+
+.filter-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.filter-label {
+    min-width: 3rem;
+    padding-top: 0.45rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.filter-button {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--accent-color-light);
+    border-radius: 4px;
+    background: var(--background);
+    color: var(--primary-text);
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+
+/* ========================================
+   RESULTATEN
+   ======================================== */
+
+.results-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.results-heading h2 {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.results-heading p {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+
+/* ========================================
+   ICONENROOSTER
+   ======================================== */
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.icon-card {
+    min-width: 0;
+    min-height: 100px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid var(--accent-color-lighter);
+    border-radius: 6px;
+    background: var(--background);
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.icon-card:hover {
+    border-color: var(--accent-color);
+    background: var(--accent-color-lighter);
+}
+
+.icon-card img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.icon-card span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.no-results {
+    padding: 2rem 0;
+    color: var(--secondary-text);
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1100px) {
+    .icon-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .nav,
+    .icon-page {
+        width: calc(100% - 2rem);
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .icon-page {
+        padding-top: 1.5rem;
+    }
+
+    .filter-group {
+        display: block;
+    }
+
+    .filter-label {
+        display: block;
+        margin-bottom: 0.4rem;
+    }
+
+    .filter-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .filter-button {
+        flex: 0 0 auto;
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .icon-card {
+        min-height: 90px;
+    }
+}
