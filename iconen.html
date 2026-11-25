@@ -13,3 +13,92 @@
     <!-- Pagina-specifieke stylesheet -->
     <link rel="stylesheet" href="styles/iconen.css">
 </head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="GemeentenIconen">
+            </a>
+
+            <details class="menu">
+                <summary>Menu</summary>
+                <ul class="nav-list">
+                    <li><a href="iconen.html">Iconen</a></li>
+                    <li><a href="illustraties.html">Illustraties</a></li>
+                    <li><a href="doe-mee.html">Doe mee</a></li>
+                    <li><a href="rechtenvrij.html">Rechtenvrij</a></li>
+                    <li><a href="credits.html">Credits</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <main class="icon-page">
+
+        <section class="icon-intro">
+            <p class="eyebrow">Open source iconenset</p>
+            <h1>Gemeente iconen</h1>
+            <p>Vind snel het juiste icoon voor jouw toepassing.</p>
+        </section>
+
+        <section class="icon-browser">
+
+            <!-- Zoekbalk -->
+            <label class="search-box">
+                <icon aria-hidden="true">⌕</icon>
+                <input
+                    type="search"
+                    id="icon-search"
+                    placeholder="Zoek een icoon..."
+                    aria-label="Zoek een icoon"
+                >
+            </label>
+
+            <!-- Categorieën -->
+            <div class="filter-group">
+                <span class="filter-label">Categorie</span>
+                <div class="filter-list" id="category-filters">
+                    <button class="filter-button active" data-category="Alles">Alles</button>
+                    <button class="filter-button" data-category="Bestuur">Bestuur</button>
+                    <button class="filter-button" data-category="Gebouwen">Gebouwen</button>
+                    <button class="filter-button" data-category="Buitenruimte">Buitenruimte</button>
+                    <button class="filter-button" data-category="Verkeer">Verkeer</button>
+                    <button class="filter-button" data-category="Afval">Afval</button>
+                    <button class="filter-button" data-category="Zorg">Zorg</button>
+                    <button class="filter-button" data-category="Onderwijs">Onderwijs</button>
+                    <button class="filter-button" data-category="Cultuur">Cultuur</button>
+                </div>
+            </div>
+
+            <!-- Stijlen -->
+            <div class="filter-group">
+                <span class="filter-label">Stijl</span>
+                <div class="filter-list" id="style-filters">
+                    <button class="filter-button active" data-style="Line">Line</button>
+                    <button class="filter-button" data-style="Fill">Fill</button>
+                    <button class="filter-button" data-style="Regular">Regular</button>
+                    <button class="filter-button" data-style="Regular diapositive">Diapositive</button>
+                </div>
+            </div>
+
+            <!-- Resultaten -->
+            <div class="results-heading">
+                <h2>Alle iconen</h2>
+                <p id="result-count">Iconen laden...</p>
+            </div>
+
+            <div class="icon-grid" id="icon-grid"></div>
+
+            <p class="no-results" id="no-results" hidden>
+                Geen iconen gevonden. Probeer een andere zoekterm.
+            </p>
+
+        </section>
+    </main>
+
+    <script src="scripts/iconen.js"></script>
+</body>
+</html>
